@@ -5,11 +5,11 @@ class UsersApi {
     }
   
     async getUsers(page = 1) {
-      return await this.request.get('/api/users?page=${page}');
+      return await this.request.get(`/api/users?page=${page}`);
     }
   
     async getUser(userId) {
-      return await this.request.get('/api/users/${userId}');
+      return await this.request.get(`/api/users/${userId}`);
     }
   
     async createUser(data) {
@@ -19,13 +19,13 @@ class UsersApi {
     }
   
     async updateUser(userId, data) {
-      return await this.request.put('/api/users/${userId}', {
+      return await this.request.put(`/api/users/${userId}`, {
         data: data
       });
     }
   
     async deleteUser(userId) {
-      return await this.request.delete('/api/users/${userId}');
+      return await this.request.delete(`/api/users/${userId}`);
     }
   }
   
